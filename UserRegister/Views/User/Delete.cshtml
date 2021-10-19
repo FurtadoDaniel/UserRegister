@@ -48,8 +48,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Apagar" class="btn btn-default" /> |
-            @Html.ActionLink("Voltar", "Index")
+            <input type="submit" value="Apagar" class="btn btn-default" /> 
+            @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-warning" })
         </div>
     }
 </div>
