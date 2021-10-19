@@ -15,5 +15,10 @@ namespace UserRegister.DAL
         //base de usuários
         public DbSet<User> Users { get; set; }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer<UserContext>(null);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

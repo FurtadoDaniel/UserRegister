@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<UserRegister.Models.User>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Cadastro de Usuários";
 }
 
-<h2>Index</h2>
+<h2>Cadastro de Usuário</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Cadastrar", "Create")
 </p>
 <table class="table">
     <tr>
@@ -19,9 +19,6 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Phone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Password)
         </th>
         <th></th>
     </tr>
@@ -38,12 +35,8 @@
             @Html.DisplayFor(modelItem => item.Phone)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Editar", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.ID })
         </td>
     </tr>
 }
